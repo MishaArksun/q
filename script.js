@@ -2,7 +2,7 @@ const questions = [
     {
         title: "Загадка 1",
         text: "Назови фамилию шефа, которого знает весь мир и вся Россия",
-        answer: "Баранников"
+        answer: "баранников"
     },
     {
         title: "Загадка 2",
@@ -54,6 +54,7 @@ function showFinal() {
 }
 
 render();
+
 
 
 
