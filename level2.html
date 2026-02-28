@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Загадка №2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Загадка №2</h1>
+        <p>
+            Без чего не бывает утра?
+        </p>
+
+        <input type="text" id="answer">
+        <button onclick="checkAnswer2()">Ответить</button>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function checkAnswer2() {
+            const answer = document.getElementById("answer").value.trim().toLowerCase();
+            if (answer === "ночь") {
+                document.body.innerHTML = "<h1>🎉 Ты прошла квест!</h1>";
+            } else {
+                document.getElementById("message").textContent =
+                    "❌ Неправильно!";
+            }
+        }
+    </script>
+</body>
+</html>
