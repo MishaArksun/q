@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 * {
     box-sizing: border-box;
@@ -6,36 +6,37 @@
 
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
+    background: #f4f6fb;
     min-height: 100vh;
-    background:
-        radial-gradient(circle at top, #ffd1dc, transparent 60%),
-        radial-gradient(circle at bottom, #c1e1ff, transparent 60%),
-        linear-gradient(135deg, #fdfbfb, #ebedee);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+
+.app {
+    width: min(100vw, 420px);
+    padding: 20px;
+}
+
+.progress {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 12px;
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: white;
     border-radius: 24px;
-    padding: 40px 32px;
-    width: min(92vw, 360px);
-    box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.08),
-        inset 0 1px 0 rgba(255, 255, 255, 0.4);
-    text-align: center;
-    animation: fadeIn 1s ease;
+    padding: 28px 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    animation: slideIn 0.4s ease;
 }
 
 h1 {
-    margin-top: 0;
-    font-weight: 600;
-    font-size: 24px;
-    color: #333;
+    margin: 0 0 10px;
+    font-size: 22px;
 }
 
 p {
@@ -47,45 +48,34 @@ p {
 input {
     margin-top: 20px;
     width: 100%;
-    padding: 14px 16px;
+    padding: 16px;
     border-radius: 14px;
     border: none;
+    font-size: 16px;
+    background: #f0f2f7;
     outline: none;
-    font-size: 15px;
-    background: #f2f3f7;
-    transition: 0.3s;
-}
-
-input:focus {
-    background: #e9ebf2;
 }
 
 button {
-    margin-top: 18px;
+    margin-top: 16px;
     width: 100%;
-    padding: 14px;
+    padding: 16px;
     border-radius: 14px;
     border: none;
-    font-size: 15px;
+    background: #4f6df5;
+    color: white;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    color: #333;
-    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(255, 154, 158, 0.4);
-}
-
-#message {
-    margin-top: 16px;
+.message {
+    margin-top: 12px;
     font-size: 14px;
-    color: #c0392b;
+    color: #e74c3c;
 }
 
-@keyframes fadeIn {
+@keyframes slideIn {
     from {
         opacity: 0;
         transform: translateY(10px);
@@ -93,20 +83,5 @@ button:hover {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 22px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    input, button {
-        font-size: 16px;
-        padding: 16px;
     }
 }
