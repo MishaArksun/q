@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="app">
+    <div class="progress" id="progress">1 / 8</div>
+
     <div class="card">
-        <h1>Загадка №1</h1>
-        <p>
-            Что всегда с тобой, но ты этого не видишь?
-        </p>
+        <h1 id="question">Загадка</h1>
+        <p id="text">Текст загадки будет здесь</p>
 
-        <input type="text" id="answer" placeholder="Введите ответ">
-        <button onclick="checkAnswer()">Ответить</button>
+        <input type="text" id="answer" placeholder="Твой ответ">
+        <button onclick="submitAnswer()">Ответить</button>
 
-        <p id="message"></p>
+        <p class="message" id="message"></p>
     </div>
+</div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
